@@ -14,7 +14,7 @@ This action creates a new transactional template version in SendGrid.
 
 ## `subject`
 
-**Required** The subject of the transactional template version.
+The subject of the transactional template version. Default ({{{ subject }}})
 
 ## `api-key`
 
