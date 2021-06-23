@@ -1,0 +1,28 @@
+name: 'New Transactional Template Version'
+description: 'Create a new transactional template version in SendGrid'
+inputs:
+  html-file-path:
+    description: 'The path where the html file of the new transactional template version is in'
+    required: true
+  name:
+    description: 'The name of the transactional template version'
+    required: true
+  subject:
+    description: 'The subject of the transactional template version'
+    default: '{{{ subject }}}'
+  api-key:
+    description: 'SendGrid API key'
+    required: true
+  template-id:
+    description: 'The template id of the transactional template'
+  lookup-table-file-path:
+    description: 'A lookup table (json format) containing the template-ids based on the name of the html file'
+  active:
+    description: 'Represents if the new transactional template version will be the active one'
+    default: 1
+outputs:
+  status:
+    description: 'The status of the post request'
+runs:
+  using: 'node12'
+  main: 'index.js'
